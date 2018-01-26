@@ -52,37 +52,9 @@ require("@babel/core").transform("code", {
 });
 ```
 
-## Options
-
-### `useBuiltIns`
-
-`boolean`, defaults to `false`.
-
-By default, this plugin uses Babel's `extends` helper which polyfills `Object.assign`. Enabling this option will use `Object.assign` directly.
-
-**.babelrc**
-
-```json
-{
-  "plugins": [
-    ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }]
-  ]
-}
-```
-
-**In**
-
-```js
-z = { x, ...y };
-```
-
-**Out**
-
-```js
-z = Object.assign({ x }, y);
-```
 
 ## References
 
 * [Proposal: Object Rest/Spread Properties for ECMAScript](https://github.com/sebmarkbage/ecmascript-rest-spread)
 * [Spec](http://sebmarkbage.github.io/ecmascript-rest-spread)
+* [Spread VS. Object.assign](http://2ality.com/2016/10/rest-spread-properties.html#spreading-objects-versus-objectassign)
